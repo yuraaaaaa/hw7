@@ -70,4 +70,96 @@ li  a{
 	min-height: 40px;
 }
 
+footer a {
+	position: relative;
+	transform: translate(0, 7px);
+	color: #000;
+	text-decoration: none;
+}
 
+.card-holder {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 200px;
+	border: 2px solid #000;
+	border-radius: 6px;
+	margin: 7px;
+}
+
+/* .card1, .card2, .card3, .card4, .card5, .card6:hover {
+	position: absolute;
+	z-index: 3;
+	background-color: burlywood;
+	transition: all .3s ease-in-out;
+} */
+
+.card img {
+	position: relative;
+	transform: translate(64px,5px);
+	width: 60px;
+	height: 60px;
+	border: 10px solid blueviolet;
+	border-radius: 50%;
+}
+
+.card h2 {
+	font-size: 16px;
+}
+
+.card span {
+	font-size: 13px;
+}
+
+button {
+	position: relative;
+	left:80px;
+	border: none;
+	border-radius: 10px;
+	background-color: darkmagenta;
+	color: #fff;
+	max-width: 40px;
+	max-height: 20px;
+}
+
+.card2 button{
+	position: relative;
+	top: 60px;
+}
+
+.card3 button {
+	position: relative;
+	top: 30px;
+}
+
+.card4 button {
+	position: relative;
+	top: 43px;
+}
+
+a {
+	position: relative;
+}
+
+a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    bottom: -3px;
+    background-color: #ffcc01;
+    transition: all 0.3s ease-in-out;
+}
