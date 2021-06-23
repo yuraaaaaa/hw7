@@ -1,4 +1,9 @@
-body {
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -6,6 +11,7 @@ body {
 
 .wrapper {
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	min-height: 100%;
 }
@@ -45,29 +51,43 @@ li  a{
 	flex-direction: row;
 	justify-content: space-between;
 	text-align: center;
-	min-height: calc(90vh - 83px);
+	padding-bottom: 80px;
+}
+
+.section-holder {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
 }
 
 .section {
 	flex-grow: 2;
+	margin: 10px 0 10px 0;
 }
 
 .aside1 {
 	background-color: blueviolet;
 	order: -1;
 	min-width: 210px;
+	align-items: stretch;
 }
 
 .aside2 {
 	background-color: cornflowerblue;
 	order: 1;
 	min-width: 210px;
+	align-items: stretch;
 }
 
 .footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
 	text-align: center;
 	background-color: green;
-	min-height: 40px;
+	height: 80px;
 }
 
 footer a {
@@ -88,18 +108,37 @@ footer a {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	max-width: 200px;
 	border: 2px solid #000;
 	border-radius: 6px;
 	margin: 7px;
+	transition: background-color .3s ease-in-out;
 }
 
-/* .card1, .card2, .card3, .card4, .card5, .card6:hover {
-	position: absolute;
-	z-index: 3;
+.card1:hover {
 	background-color: burlywood;
-	transition: all .3s ease-in-out;
-} */
+}
+
+.card2:hover {
+	background-color: coral;
+}
+
+.card3:hover {
+	background-color: darkorange;
+}
+
+.card4:hover {
+	background-color: lawngreen;
+}
+
+.card5:hover {
+	background-color: magenta;
+}
+
+.card6:hover {
+	background-color: orchid;
+}
 
 .card img {
 	position: relative;
@@ -118,34 +157,18 @@ footer a {
 	font-size: 13px;
 }
 
-button {
-	position: relative;
-	left:80px;
+.button {
+	vertical-align:bottom;
+	display:inline-block;
+	margin: 0 40% 0 40%;
 	border: none;
 	border-radius: 10px;
 	background-color: darkmagenta;
 	color: #fff;
+	text-decoration: none;
 	max-width: 40px;
 	max-height: 20px;
-}
-
-.card2 button{
-	position: relative;
-	top: 60px;
-}
-
-.card3 button {
-	position: relative;
-	top: 30px;
-}
-
-.card4 button {
-	position: relative;
-	top: 43px;
-}
-
-a {
-	position: relative;
+	order: 1;
 }
 
 a:hover::before {
@@ -162,4 +185,63 @@ a::before {
     bottom: -3px;
     background-color: #ffcc01;
     transition: all 0.3s ease-in-out;
+}
+
+.third-holder {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 10px 0 10px 0;
+}
+
+.holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: initial;
+    border: 3px solid #000;
+    width: 50%;
+    height: 250px;
+    border-top-left-radius: 6%;
+    border-top-right-radius: 6%;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+    flex:0 1 20%;
+	justify-content: center;
+}
+
+.item:nth-of-type(1) {
+    background-color: indianred;
+    order: -1;
+    flex-basis: 50%;
+	border-top-left-radius: 10%;
+}
+
+.item:nth-of-type(2) {
+    background-color: lightseagreen;
+    flex-basis: 33%;
+    order: 1;
+}
+
+.item:nth-of-type(3) {
+    background-color: blueviolet;
+    flex-basis: 33%;
+    order: 0;
+}
+
+.item:nth-of-type(4) {
+    background-color: green;
+    order:1;
+    flex-basis: 33%;
+}
+
+.item:nth-of-type(5) {
+    background-color: orange;
+    flex-basis: 50%;
+    order: -1;
+	border-top-right-radius: 10%;
 }
